@@ -1,0 +1,46 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ function Klient(nazwisko_k, imie_k, zawod_k) {
+    this.nazwisko = nazwisko_k;
+    this.imie = imie_k;
+    this.zawod = zawod_k;
+    this.wiek; 
+ }
+
+ Klient.prototype.wypisz = function () {
+    alert(this.nazwisko + ' ' + this.imie + ' ' + this.zawod + ' ' + (this.wiek ? 'Wiek: ' + this.wiek + ' lat' : ''));
+ };
+
+ 
+ Klient.prototype.pokazWiek = function () {
+    alert('Wiek: ' + this.wiek + ' lat');
+ };
+
+ 
+ function pokazNazwiskoUcznia(uczniowie, index) {
+    alert('Nazwisko ucznia: ' + uczniowie[index].nazwisko);
+ }
+
+ var osoba1 = new Klient("Jan", "kierowca owoców");
+ var osoba2 = new Klient('Anna', 'handel owocami');
+ var osoba3 = new Klient('John', 'nauczyciel owoców');
+
+ osoba1.wiek = 21; 
+ osoba2.wiek = 22; 
+ osoba3.wiek = 23; 
+
+ osoba1.wypisz();
+ osoba2.wypisz();
+ osoba3.wypisz();
+
+ osoba1.pokazWiek();
+
+ pokazNazwiskoUcznia([osoba1, osoba2, osoba3], 1);
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe
+</body>
+</html>
